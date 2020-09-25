@@ -9,11 +9,6 @@
   "Options for doom-pine."
   :group 'doom-themes)
 
-(defcustom doom-pine-brighter-comments nil
-  "If non-nil, comments will be highlighted in more vivid colors."
-  :group 'doom-pine-theme
-  :type 'boolean)
-
 (defcustom doom-pine-padded-modeline doom-themes-padded-modeline
   "If non-nil, adds a 4px padding to the mode-line. Can be an integer to
 determine the exact padding."
@@ -22,7 +17,7 @@ determine the exact padding."
 
 ;;
 (def-doom-theme doom-pine
-  "Dark theme with pastel 'retro groove' colors."
+  "Emacs theme for mountain folks."
 
   ;; name        gui       256       16
   ((bg         '("#0c1400" "#0c1400" nil          )) ; bg0
@@ -61,8 +56,8 @@ determine the exact padding."
    (vertical-bar   fg-alt)
    (selection      bg-alt2)
    (builtin        orange)
-   (comments       (if doom-pine-brighter-comments magenta grey))
-   (doc-comments   (if doom-pine-brighter-comments (doom-lighten magenta 0.2) (doom-lighten fg-alt 0.25)))
+   (comments       base5)
+   (doc-comments   (doom-lighten fg-alt 0.25))
    (constants      violet)
    (functions      cyan)
    (keywords       red)
@@ -92,6 +87,8 @@ determine the exact padding."
 
   ;; --- extra faces ------------------------
   (;;;;;;;; Editor ;;;;;;;;
+   ((secondary-selection &override) :background (doom-lighten base3 0.05))
+   ((default &override) :foreground fg)
    (cursor :background (doom-lighten bg 0.5))
    (hl-line :background bg-alt)
    ((line-number &override) :foreground base5)
