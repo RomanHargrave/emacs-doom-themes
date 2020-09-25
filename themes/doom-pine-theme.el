@@ -25,14 +25,14 @@ determine the exact padding."
   "Dark theme with pastel 'retro groove' colors."
 
   ;; name        gui       256       16
-  ((bg         '("#0c1400" "#d7ffd7" nil          ))   ; bg0_h
-   (bg-alt     '("#121e00" "#d7ffff" nil          ))
-   (bg-alt2    '("#222b14" "#504945" nil          )) ; bg2 (for region, selection etc.)
+  ((bg         '("#0c1400" "#0c1400" nil          )) ; bg0
+   (bg-alt     '("#121e00" "#121e00" nil          )) ; bg1
+   (bg-alt2    '("#222b14" "#222b14" nil          )) ; bg2 (for region, selection etc.)
 
    (base0      '("#0d1011" "black"   "black"      )) ; (self-defined)
-   (base1      '("#1d2021" "#1d1d1d" "brightblack")) ; bg0_h
-   (base2      '("#282828" "#282828" "brightblack")) ; bg0
-   (base3      '("#0c1400" "#d7ffd7" "brightblack")) ; bg1
+   (base1      '("#0c1400" "#0c1400" "brightblack")) ; bg0
+   (base2      '("#0c1400" "#0c1400" "brightblack")) ; bg0
+   (base3      '("#121e00" "#121e00" "brightblack")) ; bg1
    (base4      '("#353e29" "#5f875f" "brightblack")) ; bg3
    (base5      '("#49503d" "#5f8787" "brightblack")) ; bg4
    (base6      '("#928374" "#909090" "brightblack")) ; gray
@@ -91,10 +91,7 @@ determine the exact padding."
    (org-quote `(,(doom-lighten (car bg) 0.05) "#1f1f1f")))
 
   ;; --- extra faces ------------------------
-  (
-   
-   ;;;;;;;; Editor ;;;;;;;;
-   (default :foreground base8)
+  (;;;;;;;; Editor ;;;;;;;;
    (cursor :background (doom-lighten bg 0.5))
    (hl-line :background bg-alt)
    ((line-number &override) :foreground base5)
