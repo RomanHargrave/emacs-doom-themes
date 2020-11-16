@@ -20,9 +20,9 @@ determine the exact padding."
   "Emacs theme for mountain folks."
 
   ;; name        gui       256       16
-  ((bg         '("#0c1400" "#0c1400" nil          )) ; bg0
-   (bg-alt     '("#121e00" "#121e00" nil          )) ; bg1
-   (bg-alt2    '("#222b14" "#222b14" nil          )) ; bg2 (for region, selection etc.)
+  ((bg         '("#0c1400" "#0f0f0f" nil          )) ; bg0
+   (bg-alt     '("#121e00" "#1a1a1a" nil          )) ; bg1
+   (bg-alt2    '("#222b14" "#005f00" nil          )) ; bg2 (for region, selection etc.)
 
    (base0      '("#0d1011" "black"   "black"      )) ; (self-defined)
    (base1      '("#0c1400" "#0c1400" "brightblack")) ; bg0
